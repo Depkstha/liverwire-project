@@ -26,3 +26,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::view('posts/create', 'posts.create');
+Route::get('post/{post}/edit', \App\Livewire\EditPost::class);
